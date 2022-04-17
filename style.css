@@ -1,0 +1,41 @@
+html, body { height: 95%; }
+
+.area {
+  margin: auto;
+  flex-wrap: wrap;
+  display: flex;
+  height:100%;
+}
+ 
+.tab_class {
+  width: 150px;
+  height: 25px;
+  background-color: darkgrey;
+  line-height: 25px;
+  font-size: 15px;
+  text-align: center;
+  display: block;
+  float: left;
+  order: -1;
+}
+ 
+input[name="tab_name"] {
+  display: none;
+}
+ 
+input:checked + .tab_class {
+  background-color: cadetblue;
+  color: aliceblue;
+}
+ 
+.content_class {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+ 
+input:checked + .tab_class + .content_class {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
